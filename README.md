@@ -39,17 +39,25 @@ that behavior is expected.
 
 
 ## Adding Z-Wave Devices
-To add a new Z-Wave device, also known as a `node`:
+Apparently, adding to many secure devices to a Z-Wave network can cause problems.
+There are devices that don't need to be added securely such as temperature and
+humiidty sensors; i.e. things only output events. Devices that can recieve commands
+for automation purposes such as triggering an alarm.
+
+### Unsecure
+To add a new Z-Wave device (unsecure), also known as a `node`:
 
 1. Go to the `Configuration` page
 2. Then click on `Integrations`, which will bring you to the integration overview page
 3. Click on the `OpenZWave` `configure` button
 
+### Secure
+
 ## Debugging
 ### SSH Access to the Host
 See https://developers.home-assistant.io/docs/operating-system/debugging/ .
 
-This will allow you to directly access the underlying host, which means you 
+This will allow you to directly access the underlying host, which means you
 should be able to directly access the logs of the running Docker containers
 
 ### Installing MQTT (Mosquitto)
